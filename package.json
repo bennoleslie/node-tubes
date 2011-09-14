@@ -1,0 +1,8 @@
+{
+  "name"          : "node-tubes",
+  "version"       : "0.0.1",
+  "description"   : "A web application development framework where you appilcation is modelled as a series of tubes.",
+  "author"        : "Benno Leslie",
+  "contributors"  : [],
+  "main"          : "./lib/tubes",
+}
