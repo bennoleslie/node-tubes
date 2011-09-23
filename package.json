@@ -1,0 +1,8 @@
+{
+  "name"          : "grabbag",
+  "version"       : "0.0.1",
+  "description"   : "A set of small utility functions.",
+  "keywords"      : ["utility"],
+  "author"        : "Benno Leslie <benno@benno.id.au> (http://benno.id.au/)",
+  "main"          : "grabbag.js"
+}
