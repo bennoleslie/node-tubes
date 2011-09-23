@@ -1,11 +1,13 @@
 node tubes
 ==========
 
+* This is under active development and not yet ready for use. *
+
 > Your web application is a series of tubes
 
 node tubes lets you create complex web applications from a set of small components called *tubes*.
 
-    tubes = require('node-tubes')
+    var tubes = require('node-tubes')
 
     var service = new tubes.Service(
                     {'main' : { iface: '127.0.0.1', port: 2080, canonicalHost: 'localhost' } },
@@ -66,10 +68,32 @@ Pre-defined Tubes
 
     tubes.CannedResponse(body, status, headers)
 
-This is the simplest tube out there. It will always respond with the same response. The `body` argument is required. This is the data that will be sent as part of the HTTP response. The `status` argument is optional, it defaults to `200`. This is the HTTP status code that is returned as part of the response. The `headers` argument is optional, it defaults to `{"Content-Type": "text/plain"}`. These are the HTTP headers that will be returned as part of the response.
+This is one of the simplest tube out there; it will always respond with the same response. The `body` argument is required. This is the data that will be sent as part of the HTTP response.
+
+The `status` argument is optional, it defaults to `200`. This is the HTTP status code that is returned as part of the response. If the `status` argument is set to `null` it will use whatever the current status of the transaction is.
+
+The `headers` argument is optional, it defaults to `{"Content-Type": "text/plain"}`. These are the HTTP headers that will be returned as part of the response.
 
 > Gzip
 
     tubes.Gzip()
 
 This tube will compress the output using Gzip compress (if supported by the client).
+
+*Status*: Not yet implemented.
+
+TODO
+----
+
+Here are some things that are stil left to do:
+
+ * csrf protection
+ * gzip encoding
+ * asset function execution
+ * input side of things
+ * ssl sharing context
+ * memcached setup
+
+There is still plenty of other things to do as well! See the TODO file
+for some more detailed TODO.
+

@@ -1,0 +1,81 @@
+Random design ideas for things that need to be done.
+
+
+Asset Management
+-------------------
+
+1: Fixed assets - static files
+
+2: Fixed assets - CSS / less.js
+
+3: Pseudo build system - 
+
+
+
+Problems:
+
+1: Efficient
+
+2: Very easy to use when debugging.
+
+3: stream transformation.
+
+4: disc -> stream.
+
+less on the fly
+
+less fixed.
+
+
+if (debug) {
+  /* generate */
+} else {
+  /* read from disc */
+}
+
+/* write to disc */
+
+
+
+Question: Why do we write to disc -> because we want them to be versioned assets. 
+Answer: Versioned assets need to be written to disc.
+
+Is there a way in which we can do versioned assets without writing to disc?
+
+Versioning relies on writing something to git. Git relies on things being on disc.
+
+Can we do versinoing without git? Well, we probably can but why would we want to do that? Git naturally is doing the versioning.
+
+Therefore, any versioned asset should be versioned by git.
+
+We need versioned assets if we rea going to upgrade things easily.
+
+So... an asset should:
+
+ - have a way of writing the asset to disk.
+ - generating the asset on the fly.
+
+AssetManager
+ Asset plugins
+
+  Static file
+    favicon.ico
+  Static directory
+    
+  less-css
+
+
+map path -> 
+   url path -> asset file
+   optional -> generate asset file
+   
+
+Problems: forgetting to generate -> pre-commit hooks (?) , testing.
+
+
+static directory. vs static file.
+
+mime-types
+mime explicit
+
+static-dir => path-prefix
