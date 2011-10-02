@@ -22,3 +22,4 @@ Functions
  * `StateMachine`: a class for simplifying the construction of state machines.
  * `XmlStateMachine`: a class for simplifying parsing of XML using a state machine.
  * `parseArgs`: a very simply command line parser
+ * `ensureDirSync`: create a directory if it doesn't already exists.
